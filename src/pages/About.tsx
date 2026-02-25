@@ -15,7 +15,7 @@ export default function About() {
             <span className="text-[#d4af37] font-bold uppercase tracking-widest text-xs mb-4 block">Our Story</span>
             <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-8 leading-tight">
               Crafting Excellence <br />
-              <span className="gold-gradient">Since 2015</span>
+              <span className="gold-gradient">Since 2025</span>
             </h1>
             <p className="text-white/50 text-lg leading-relaxed mb-8">
               Sky8 VIP Lounge was born from a simple vision: to create a sanctuary where culinary mastery and luxury hospitality converge. What started as a small boutique lounge has evolved into one of the city's most prestigious dining destinations.
@@ -35,7 +35,7 @@ export default function About() {
               />
             </div>
             <div className="absolute -top-8 -left-8 w-48 h-48 bg-[#d4af37] rounded-3xl p-8 flex flex-col justify-center items-center text-black text-center">
-              <span className="text-4xl font-bold">10+</span>
+              <span className="text-4xl font-bold">1+</span>
               <span className="text-[10px] font-bold uppercase tracking-widest">Years of Excellence</span>
             </div>
           </div>
