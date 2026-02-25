@@ -25,9 +25,9 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="lg:col-span-1 space-y-8">
             {[
-              { icon: MapPin, title: 'Location', content: '88 Sky Avenue, VIP District, Colombo, Sri Lanka' },
-              { icon: Phone, title: 'Phone', content: '+94 11 234 5678' },
-              { icon: Mail, title: 'Email', content: 'reservations@sky8vip.com' },
+              { icon: MapPin, title: 'Location', content: 'No 423, Nawala Road, Rajagiriya' },
+              { icon: Phone, title: 'Phone', content: '+94 777474368 ' },
+              { icon: Mail, title: 'Email', content: 'info@cec.lk' },
               { icon: Clock, title: 'Hours', content: 'Mon - Sun: 11:00 AM - 11:00 PM' },
             ].map((info, idx) => (
               <motion.div
@@ -104,13 +104,14 @@ export default function Contact() {
 
         {/* Map Placeholder */}
         <div className="mt-24 aspect-[21/9] rounded-3xl overflow-hidden border border-white/10 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-          <img
-            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=2000"
-            className="w-full h-full object-cover"
-            alt="Map Location"
-            referrerPolicy="no-referrer"
-          />
-        </div>
+  <iframe
+    src="https://www.google.com/maps?q=423+Nawala+Rd,+Sri+Jayawardenepura+Kotte+10100&output=embed"
+    className="w-full h-full"
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    allowFullScreen
+  ></iframe>
+</div>
       </div>
     </div>
   );
