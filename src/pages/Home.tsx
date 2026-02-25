@@ -1,14 +1,30 @@
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { menuData, MenuItem } from "../data/menu";
 import DishCard from "../components/DishCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DishModal from "../components/DishModal";
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import SKY8 from "../img/SKY8.jpeg";
+
+const HERO_IMAGES = [
+  "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=2000",
+];
 
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
-  // Only Thai dishes for the Special Menu section
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-slide hero images
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   const thaiSection = menuData.find(
     (section) => section.title === "Thai Dishes",
   );
@@ -19,12 +35,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#222]">
-          <img
-            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2000"
-            className="w-full h-full object-cover opacity-70 scale-110"
-            alt="Hero Background"
-            referrerPolicy="no-referrer"
-          />
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentImageIndex}
+              src={HERO_IMAGES[currentImageIndex]}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 0.7, scale: 1.1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="w-full h-full object-cover"
+              alt="Hero Background"
+              referrerPolicy="no-referrer"
+            />
+          </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
         </div>
 
@@ -67,9 +90,9 @@ export default function Home() {
       {/* Special Menu Section */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-2 text-[#d4af37] mb-4">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8 text-center md:text-left">
+            <div className="max-w-2xl w-full">
+              <div className="flex items-center gap-2 text-[#d4af37] mb-4 justify-center md:justify-start">
                 <Star className="w-5 h-5 fill-[#d4af37]" />
                 <span className="font-bold uppercase tracking-widest text-xs">
                   Thai Dishes
@@ -79,12 +102,14 @@ export default function Home() {
                 Our <span className="gold-gradient">Thai Specialties</span>
               </h2>
             </div>
-            <Link
-              to="/menu"
-              className="text-[#d4af37] font-bold uppercase tracking-widest text-sm flex items-center gap-2 hover:gap-4 transition-all"
-            >
-              View Full Menu <ArrowRight className="w-4 h-4" />
-            </Link>
+            <div className="w-full md:w-auto flex justify-center md:justify-end">
+              <Link
+                to="/menu"
+                className="text-[#d4af37] font-bold uppercase tracking-widest text-sm flex items-center gap-2 hover:gap-4 transition-all"
+              >
+                View Full Menu <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
@@ -110,7 +135,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1550966842-2849a220276c?auto=format&fit=crop&q=80&w=1000"
+                  src={SKY8}
                   className="w-full h-full object-cover"
                   alt="Dining Experience"
                   referrerPolicy="no-referrer"

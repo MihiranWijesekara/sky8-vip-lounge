@@ -17,7 +17,7 @@ export default function DishCard({ item, onClick }: DishCardProps) {
       className="group bg-[#121212] rounded-2xl overflow-hidden border border-white/5 hover:border-[#d4af37]/30 transition-all cursor-pointer"
       onClick={() => onClick(item)}
     >
-      <div className="relative h-56 w-72 overflow-hidden">
+      <div className="relative h-56 w-full sm:w-72 sm:h-56 overflow-hidden">
         <img
           src={item.img}
           alt={item.name}
