@@ -8,10 +8,11 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
-  const specialDishes = menuData
-    .flatMap((section) => section.items)
-    .filter((item) => item.isSpecial)
-    .slice(0, 4);
+  // Only Thai dishes for the Special Menu section
+  const thaiSection = menuData.find(
+    (section) => section.title === "Thai Dishes",
+  );
+  const thaiDishes = thaiSection ? thaiSection.items : [];
 
   return (
     <div className="pt-20">
@@ -71,11 +72,11 @@ export default function Home() {
               <div className="flex items-center gap-2 text-[#d4af37] mb-4">
                 <Star className="w-5 h-5 fill-[#d4af37]" />
                 <span className="font-bold uppercase tracking-widest text-xs">
-                  Chef's Selection
+                  Thai Dishes
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
-                Today's <span className="gold-gradient">Specialties</span>
+                Our <span className="gold-gradient">Thai Specialties</span>
               </h2>
             </div>
             <Link
@@ -86,8 +87,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {specialDishes.map((item, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
+            {thaiDishes.map((item, idx) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: 20 }}
