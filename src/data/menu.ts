@@ -12,7 +12,7 @@ import padThaiImg from "../img/PadThai.jpg";
 import satayChickenImg from "../img/stayChicken.jpg";
 import mangoStickyImg from "../img/MangoSticky.jpg";
 import vegetablericeImg from "../img/VegetableRice.jpg";
-import ChickenRiceImg from "../img/ChickenRice.jpg";
+import ChickenRiceImg from "../img/ChickenFriedRice.jpg";
 import eggriceImg from "../img/eggrice.jpg";
 import SeaFoodRiceImg from "../img/SeaFoodRice.jpg";
 import MixedRiceImg from "../img/MixedRice.jpg";
@@ -54,20 +54,14 @@ export const menuData: MenuSection[] = [
         name: "Vegetable Rice",
         img: vegetablericeImg,
         desc: "A healthy blend of fresh vegetables and aromatic rice, perfect for vegetarians.",
-        sizes: [
-          { label: "Small", price: 350 },
-          { label: "Large", price: 550 },
-        ],
+        sizes: [{ label: "Two Person", price: 1400 }],
       },
 
       {
         name: "Chicken Rice",
         img: ChickenRiceImg,
         desc: "Tender chicken pieces served with fragrant rice and a blend of spices.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1900 }],
         isSpecial: true,
       },
 
@@ -75,10 +69,7 @@ export const menuData: MenuSection[] = [
         name: "Egg Rice",
         img: eggriceImg,
         desc: "Classic rice tossed with scrambled eggs and mild seasonings.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1500 }],
         isSpecial: true,
       },
 
@@ -86,10 +77,7 @@ export const menuData: MenuSection[] = [
         name: "Sea Food Rice",
         img: SeaFoodRiceImg,
         desc: "A rich medley of seafood and rice, cooked to perfection with coastal spices.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 2200 }],
         isSpecial: true,
       },
 
@@ -97,10 +85,7 @@ export const menuData: MenuSection[] = [
         name: "Mixed Rice",
         img: MixedRiceImg,
         desc: "A flavorful mix of rice, vegetables, and proteins for a hearty meal.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 2200 }],
         isSpecial: true,
       },
     ],
@@ -114,32 +99,23 @@ export const menuData: MenuSection[] = [
         name: "Chicken Nasi Gorana",
         img: ChickenNasiGoranaImg,
         desc: "Indonesian-style fried rice with succulent chicken and vegetables.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1950 }],
+        isSpecial: true,
+      },
+
+      {
+        name: "Seafood Nasi Gorana",
+        img: eggnasiImg,
+        desc: "A delicious blend of fried rice with fresh seafood, seasoned with traditional spices.",
+        sizes: [{ label: "Two Person", price: 2700 }],
         isSpecial: true,
       },
 
       {
         name: "Mixed Nasi Gorana",
         img: mixednasiImg,
-        desc: "A delightful mix of fried rice, vegetables, and assorted meats.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
-        isSpecial: true,
-      },
-
-      {
-        name: "Egg Nasi Gorana",
-        img: eggnasiImg,
-        desc: "Fried rice with egg, vegetables, and a touch of spice.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        desc: "A flavorful mix of fried rice, vegetables, and meats.",
+        sizes: [{ label: "Two Person", price: 2450 }],
         isSpecial: true,
       },
     ],
@@ -152,30 +128,21 @@ export const menuData: MenuSection[] = [
         name: "Fried & Chille Prawn",
         img: FriedPrawnImg,
         desc: "Juicy prawns fried and tossed with spicy chili sauce.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2300 }],
         isSpecial: true,
       },
       {
         name: "Devilled Prawn",
         img: DevilledPrawnImg,
         desc: "Prawns cooked in a fiery devilled sauce for spice lovers.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2300 }],
         isSpecial: true,
       },
       {
         name: "Garlic Prawn",
         img: GarlicPrawnImg,
         desc: "Prawns sautéed with garlic and herbs for a savory treat.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2300 }],
         isSpecial: true,
       },
     ],
@@ -188,40 +155,28 @@ export const menuData: MenuSection[] = [
         name: "Fried & Chille Fish",
         img: FriedChilleImg,
         desc: "Fish fillets fried and tossed in spicy chili sauce.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 1800 }],
         isSpecial: true,
       },
       {
         name: "Stew Fish",
         img: StewFishImg,
         desc: "Tender fish cooked in a rich stew with vegetables and spices.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2200 }],
         isSpecial: true,
       },
       {
         name: "Devilled Fish",
         img: DevilledFishImg,
         desc: "Fish cooked in spicy devilled sauce for a bold flavor.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2200 }],
         isSpecial: true,
       },
       {
         name: "Hot Battered Fish",
         img: HotBatteredImg,
         desc: "Crispy battered fish served hot with tangy sauce.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2400 }],
         isSpecial: true,
       },
     ],
@@ -234,40 +189,28 @@ export const menuData: MenuSection[] = [
         name: "Fried Beef Vegetable",
         img: FriedBeefVegetableImg,
         desc: "Beef stir-fried with fresh vegetables and savory sauce.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2800 }],
         isSpecial: true,
       },
       {
         name: "Devilled Beef",
         img: DevilledBeefImg,
         desc: "Beef cooked in spicy devilled sauce for a fiery taste.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2400 }],
         isSpecial: true,
       },
       {
         name: "Beef Stew",
         img: BeefStewImg,
         desc: "Slow-cooked beef stew with rich flavors and tender meat.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2200 }],
         isSpecial: true,
       },
       {
         name: "Beef with Kankun and Garlic",
         img: KankunImg,
         desc: "Beef stir-fried with kankun and garlic for a unique flavor.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One plate", price: 2400 }],
         isSpecial: true,
       },
     ],
@@ -280,20 +223,14 @@ export const menuData: MenuSection[] = [
         name: "Vegetable Noodles",
         img: VegetableNoodlesImg,
         desc: "Noodles stir-fried with assorted vegetables and light sauce.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1400 }],
         isSpecial: true,
       },
       {
         name: "Chicken Noodles",
         img: ChickenNoodlesImg,
         desc: "Noodles stir-fried with chicken and vegetables.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1900 }],
         isSpecial: true,
       },
 
@@ -301,30 +238,21 @@ export const menuData: MenuSection[] = [
         name: "Egg Noodles",
         img: EggNoodlesImg,
         desc: "Noodles stir-fried with egg and mild spices.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1500 }],
         isSpecial: true,
       },
       {
         name: "Mixed Noodles",
         img: MixedNoodlesImg,
         desc: "A mix of noodles, vegetables, and proteins for a filling meal.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 2200 }],
         isSpecial: true,
       },
       {
         name: "Sea Food Noodles",
         img: seafoodImg,
         desc: "Noodles stir-fried with assorted seafood and vegetables.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 2200 }],
         isSpecial: true,
       },
     ],
@@ -337,30 +265,21 @@ export const menuData: MenuSection[] = [
         name: "Cheese Omelet",
         img: cheesImg,
         desc: "Fluffy omelet with melted cheese and herbs.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One ", price: 1150 }],
         isSpecial: true,
       },
       {
         name: "Sausage Omelet",
         img: SausageOmeletImg,
         desc: "Omelet stuffed with savory sausage pieces.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One", price: 950 }],
         isSpecial: true,
       },
       {
         name: "Cheese Omelet Chicken",
         img: bbImg,
         desc: "Cheese omelet with tender chicken pieces for extra protein.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One", price: 1350 }],
         isSpecial: true,
       },
     ],
@@ -374,55 +293,37 @@ export const menuData: MenuSection[] = [
         name: "Thai Tom yum Soup",
         img: tomYumImg,
         desc: "A classic Thai soup with spicy and sour flavors, loaded with seafood and herbs.",
-        sizes: [
-          { label: "Small", price: 350 },
-          { label: "Large", price: 550 },
-        ],
+        sizes: [{ label: "One portion", price: 1400 }],
       },
       {
         name: "Thai Rice",
         img: thaiRiceImg,
         desc: "Fragrant Thai rice cooked with traditional spices and vegetables.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Two Person", price: 1200 }],
       },
       {
         name: "Thai Fish Cake(6)",
         img: thaiFishCakeImg,
         desc: "Six pieces of authentic Thai fish cakes, crispy and flavorful.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "Six Pieces  ", price: 2740 }],
       },
       {
         name: "Pad Thai Chicken",
         img: padThaiImg,
         desc: "Classic Pad Thai noodles stir-fried with chicken, peanuts, and vegetables.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One Plate", price: 2870 }],
       },
       {
         name: "Satay Chicken",
         img: satayChickenImg,
         desc: "Grilled chicken skewers served with creamy satay sauce.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One Plate", price: 1650 }],
       },
       {
         name: "Sticky Rice with Mango",
         img: mangoStickyImg,
         desc: "Sweet sticky rice topped with fresh mango slices, a Thai dessert favorite.",
-        sizes: [
-          { label: "Small", price: 450 },
-          { label: "Large", price: 650 },
-        ],
+        sizes: [{ label: "One portion", price: 2200 }],
       },
     ],
   },

@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
-import { Award, Users, Heart, ShieldCheck } from 'lucide-react';
+import { motion } from "motion/react";
+import { Award, Users, Heart, ShieldCheck } from "lucide-react";
 
 export default function About() {
   return (
@@ -12,16 +12,24 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-[#d4af37] font-bold uppercase tracking-widest text-xs mb-4 block">Our Story</span>
+            <span className="text-[#d4af37] font-bold uppercase tracking-widest text-xs mb-4 block">
+              Our Story
+            </span>
             <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-8 leading-tight">
               Crafting Excellence <br />
               <span className="gold-gradient">Since 2025</span>
             </h1>
             <p className="text-white/50 text-lg leading-relaxed mb-8">
-              Sky8 VIP Lounge was born from a simple vision: to create a sanctuary where culinary mastery and luxury hospitality converge. What started as a small boutique lounge has evolved into one of the city's most prestigious dining destinations.
+              Sky8 VIP Lounge was born from a simple vision: to create a
+              sanctuary where culinary mastery and luxury hospitality converge.
+              What started as a small boutique lounge has evolved into one of
+              the city's most prestigious dining destinations.
             </p>
             <p className="text-white/50 text-lg leading-relaxed">
-              Our philosophy is rooted in the belief that dining is not just about food, but about the memories created around the table. Every ingredient is hand-selected, every recipe is tested to perfection, and every guest is treated like royalty.
+              Our philosophy is rooted in the belief that dining is not just
+              about food, but about the memories created around the table. Every
+              ingredient is hand-selected, every recipe is tested to perfection,
+              and every guest is treated like royalty.
             </p>
           </motion.div>
 
@@ -36,7 +44,9 @@ export default function About() {
             </div>
             <div className="absolute -top-8 -left-8 w-48 h-48 bg-[#d4af37] rounded-3xl p-8 flex flex-col justify-center items-center text-black text-center">
               <span className="text-4xl font-bold">1+</span>
-              <span className="text-[10px] font-bold uppercase tracking-widest">Years of Excellence</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest">
+                Years of Excellence
+              </span>
             </div>
           </div>
         </div>
@@ -44,10 +54,26 @@ export default function About() {
         {/* Values */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
           {[
-            { icon: Award, title: 'Quality First', desc: 'We source only the finest, freshest ingredients for every dish.' },
-            { icon: Users, title: 'Expert Team', desc: 'Our chefs and staff are trained to provide world-class service.' },
-            { icon: Heart, title: 'Passion', desc: 'Every plate is a work of art created with genuine passion.' },
-            { icon: ShieldCheck, title: 'Exclusivity', desc: 'A VIP experience designed for those who appreciate the best.' },
+            {
+              icon: Award,
+              title: "Quality First",
+              desc: "We source only the finest, freshest ingredients for every dish.",
+            },
+            {
+              icon: Users,
+              title: "Expert Team",
+              desc: "Our chefs and staff are trained to provide world-class service.",
+            },
+            {
+              icon: Heart,
+              title: "Passion",
+              desc: "Every plate is a work of art created with genuine passion.",
+            },
+            {
+              icon: ShieldCheck,
+              title: "Exclusivity",
+              desc: "A VIP experience designed for those who appreciate the best.",
+            },
           ].map((value, idx) => (
             <motion.div
               key={value.title}
@@ -58,14 +84,18 @@ export default function About() {
               className="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-[#d4af37]/30 transition-all group"
             >
               <value.icon className="w-10 h-10 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-serif font-bold text-white mb-4">{value.title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed">{value.desc}</p>
+              <h3 className="text-xl font-serif font-bold text-white mb-4">
+                {value.title}
+              </h3>
+              <p className="text-white/40 text-sm leading-relaxed">
+                {value.desc}
+              </p>
             </motion.div>
           ))}
         </div>
 
         {/* Team Section */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-4xl font-serif font-bold text-white mb-4">Meet Our <span className="gold-gradient">Master Chefs</span></h2>
           <p className="text-white/50 max-w-2xl mx-auto">The creative minds behind our exquisite menu, bringing decades of international experience to your table.</p>
         </div>
@@ -96,7 +126,7 @@ export default function About() {
               <p className="text-[#d4af37] text-xs font-bold uppercase tracking-widest mt-1">{member.role}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
